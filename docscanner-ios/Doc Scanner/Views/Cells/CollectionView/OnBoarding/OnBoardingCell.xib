@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="OnBoardingCell" customModule="Doc_Scanner" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64e-ow-tbU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzp-no-shb">
+                                <rect key="frame" x="184" y="100" width="46" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn any document into PDF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUb-5C-JSg">
+                                <rect key="frame" x="117.5" y="133.5" width="179" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xmO-W0-dxa">
+                                <rect key="frame" x="36" y="226" width="342" height="399"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xmO-W0-dxa" secondAttribute="height" multiplier="6:7" id="l2B-G5-IJv"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="White"/>
+                        <constraints>
+                            <constraint firstItem="xmO-W0-dxa" firstAttribute="leading" secondItem="64e-ow-tbU" secondAttribute="leading" constant="36" id="0rs-57-GvG"/>
+                            <constraint firstItem="xmO-W0-dxa" firstAttribute="top" secondItem="tUb-5C-JSg" secondAttribute="bottom" constant="76" id="B4m-55-d7I"/>
+                            <constraint firstItem="tUb-5C-JSg" firstAttribute="centerX" secondItem="vzp-no-shb" secondAttribute="centerX" id="QLI-yz-gYV"/>
+                            <constraint firstItem="vzp-no-shb" firstAttribute="centerX" secondItem="64e-ow-tbU" secondAttribute="centerX" id="ZSM-2e-meY"/>
+                            <constraint firstItem="tUb-5C-JSg" firstAttribute="top" secondItem="vzp-no-shb" secondAttribute="bottom" constant="10" id="aDD-Jc-UBm"/>
+                            <constraint firstAttribute="trailing" secondItem="xmO-W0-dxa" secondAttribute="trailing" constant="36" id="cG4-fO-Gmw"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="64e-ow-tbU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2cC-q5-sc1"/>
+                <constraint firstItem="64e-ow-tbU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="EO1-Li-ttl"/>
+                <constraint firstItem="vzp-no-shb" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="56" id="TWT-UN-Ofe"/>
+                <constraint firstAttribute="trailing" secondItem="64e-ow-tbU" secondAttribute="trailing" id="euS-cf-lZp"/>
+                <constraint firstAttribute="bottom" secondItem="64e-ow-tbU" secondAttribute="bottom" id="seV-1t-KGW"/>
+            </constraints>
+            <connections>
+                <outlet property="gifView" destination="xmO-W0-dxa" id="CT0-Gj-N4n"/>
+                <outlet property="subTitleLabel" destination="tUb-5C-JSg" id="kSc-vZ-EXX"/>
+                <outlet property="titleLabel" destination="vzp-no-shb" id="rn0-U2-jTV"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

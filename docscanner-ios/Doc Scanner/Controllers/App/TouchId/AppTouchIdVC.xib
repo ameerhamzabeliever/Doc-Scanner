@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppTouchIdVC" customModule="Doc_Scanner" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="touch-red" translatesAutoresizingMaskIntoConstraints="NO" id="TnL-6z-qyr">
+                    <rect key="frame" x="132" y="233.5" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="TnL-6z-qyr" secondAttribute="height" multiplier="1:1" id="mCG-5o-fkY"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAQ-au-osA">
+                    <rect key="frame" x="132" y="233.5" width="150" height="150"/>
+                    <connections>
+                        <action selector="didTapTouchId:" destination="-1" eventType="touchUpInside" id="bAz-WJ-Yi7"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Touch Id to Unlock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEX-7x-kIa">
+                    <rect key="frame" x="102.5" y="60" width="209" height="23.5"/>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                    <color key="textColor" name="Tab-Grey"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Mc-P4-wqJ">
+                    <rect key="frame" x="128.5" y="810" width="157" height="36"/>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                    <state key="normal" title="Use pin to unlock"/>
+                    <connections>
+                        <action selector="didTapPasscode:" destination="-1" eventType="touchUpInside" id="OVD-bY-CgT"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="White"/>
+            <constraints>
+                <constraint firstItem="3Mc-P4-wqJ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="4ot-BJ-EHn"/>
+                <constraint firstItem="TnL-6z-qyr" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="6qv-TW-KuF"/>
+                <constraint firstItem="zEX-7x-kIa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="9FL-9y-DdI"/>
+                <constraint firstItem="WAQ-au-osA" firstAttribute="centerY" secondItem="TnL-6z-qyr" secondAttribute="centerY" id="DqG-ea-Qc3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3Mc-P4-wqJ" secondAttribute="bottom" constant="16" id="Et0-NW-fj8"/>
+                <constraint firstItem="zEX-7x-kIa" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Oo1-Tg-dzj"/>
+                <constraint firstItem="TnL-6z-qyr" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.167411" id="Rum-bd-LHV"/>
+                <constraint firstItem="WAQ-au-osA" firstAttribute="height" secondItem="TnL-6z-qyr" secondAttribute="height" id="WxR-jC-KQc"/>
+                <constraint firstItem="TnL-6z-qyr" firstAttribute="top" secondItem="zEX-7x-kIa" secondAttribute="bottom" constant="150" id="X9C-mZ-bfP"/>
+                <constraint firstItem="WAQ-au-osA" firstAttribute="width" secondItem="TnL-6z-qyr" secondAttribute="width" id="Ya0-Fb-3pN"/>
+                <constraint firstItem="WAQ-au-osA" firstAttribute="centerX" secondItem="TnL-6z-qyr" secondAttribute="centerX" id="lgT-lb-SGA"/>
+            </constraints>
+            <point key="canvasLocation" x="34.782608695652179" y="91.741071428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="touch-red" width="507" height="627"/>
+        <namedColor name="Tab-Grey">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

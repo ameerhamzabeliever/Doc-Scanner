@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="idA-Jk-Jmt" customClass="ScanTypeCell" customModule="Doc_Scanner" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="15"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="60" height="15"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVP-fA-ncn">
+                        <rect key="frame" x="0.0" y="0.0" width="60" height="15"/>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="9"/>
+                        <color key="textColor" red="0.58039215690000001" green="0.58039215690000001" blue="0.58039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="OVP-fA-ncn" firstAttribute="top" secondItem="idA-Jk-Jmt" secondAttribute="top" id="9aR-3q-ezg"/>
+                <constraint firstAttribute="trailing" secondItem="OVP-fA-ncn" secondAttribute="trailing" id="la8-CL-Pnx"/>
+                <constraint firstItem="OVP-fA-ncn" firstAttribute="leading" secondItem="idA-Jk-Jmt" secondAttribute="leading" id="qsy-YL-3Yi"/>
+                <constraint firstAttribute="bottom" secondItem="OVP-fA-ncn" secondAttribute="bottom" id="r8p-E4-x3l"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="e7L-fl-Etd"/>
+            <connections>
+                <outlet property="nameLabel" destination="OVP-fA-ncn" id="cu0-Oy-zUU"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="107"/>
+        </collectionViewCell>
+    </objects>
+</document>

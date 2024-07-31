@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Documents" representedClassName="Documents" syncable="YES" codeGenerationType="class">
+        <attribute name="created_at" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="folder_id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lock_type" optional="YES" attributeType="Integer 16" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="type" attributeType="String"/>
+    </entity>
+    <entity name="Pages" representedClassName="Pages" syncable="YES" codeGenerationType="class">
+        <attribute name="cropped_image" optional="YES" attributeType="Binary"/>
+        <attribute name="enhanced_image" optional="YES" attributeType="Binary"/>
+        <attribute name="file_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="original_image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="page_size" optional="YES" attributeType="String"/>
+        <attribute name="scanner_type" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Quads" representedClassName="Quads" syncable="YES" codeGenerationType="class">
+        <attribute name="bottom_left_x" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="bottom_left_y" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="bottom_right_x" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="bottom_right_y" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="page_id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="top_left_x" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="top_left_y" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="top_right_x" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="top_right_y" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="Documents" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="Pages" positionX="-63" positionY="18" width="128" height="148"/>
+        <element name="Quads" positionX="-54" positionY="36" width="128" height="193"/>
+    </elements>
+</model>

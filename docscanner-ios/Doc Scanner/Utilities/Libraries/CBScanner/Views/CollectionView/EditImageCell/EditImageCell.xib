@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="EditImageCell" customModule="Doc_Scanner" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="632"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="632"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HxL-Ct-mBx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="632"/>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="whR-U9-r6R">
+                        <rect key="frame" x="192" y="10" width="30" height="18"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Edit  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoW-9P-5fg">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="18"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="10"/>
+                                <color key="textColor" name="Blue"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gli-rt-eNv">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="18"/>
+                                <connections>
+                                    <action selector="toggleEdit:" destination="gTV-IL-0wX" eventType="touchUpInside" id="bS1-ZK-A6h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="White"/>
+                        <constraints>
+                            <constraint firstItem="XoW-9P-5fg" firstAttribute="width" secondItem="whR-U9-r6R" secondAttribute="width" id="3C5-rO-iJ9"/>
+                            <constraint firstItem="Gli-rt-eNv" firstAttribute="width" secondItem="whR-U9-r6R" secondAttribute="width" id="50f-SL-3MV"/>
+                            <constraint firstItem="XoW-9P-5fg" firstAttribute="centerX" secondItem="whR-U9-r6R" secondAttribute="centerX" id="V8I-MA-g0b"/>
+                            <constraint firstItem="Gli-rt-eNv" firstAttribute="centerY" secondItem="whR-U9-r6R" secondAttribute="centerY" id="efa-Wz-bZi"/>
+                            <constraint firstItem="Gli-rt-eNv" firstAttribute="height" secondItem="whR-U9-r6R" secondAttribute="height" id="gJN-zs-Qii"/>
+                            <constraint firstItem="Gli-rt-eNv" firstAttribute="centerX" secondItem="whR-U9-r6R" secondAttribute="centerX" id="jJF-cu-Vok"/>
+                            <constraint firstItem="XoW-9P-5fg" firstAttribute="centerY" secondItem="whR-U9-r6R" secondAttribute="centerY" id="nEP-JO-K1a"/>
+                            <constraint firstItem="XoW-9P-5fg" firstAttribute="height" secondItem="whR-U9-r6R" secondAttribute="height" id="wtU-Ll-jSD"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.14999999999999999"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" name="Black"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="whR-U9-r6R" firstAttribute="centerX" secondItem="HxL-Ct-mBx" secondAttribute="centerX" id="70P-zu-pAI"/>
+                <constraint firstItem="HxL-Ct-mBx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9n4-rT-V1t"/>
+                <constraint firstItem="whR-U9-r6R" firstAttribute="height" secondItem="HxL-Ct-mBx" secondAttribute="height" multiplier="0.0285" id="FIW-pk-3kL"/>
+                <constraint firstItem="HxL-Ct-mBx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="YFc-pd-A7C"/>
+                <constraint firstAttribute="bottom" secondItem="HxL-Ct-mBx" secondAttribute="bottom" id="ezq-wY-jie"/>
+                <constraint firstAttribute="trailing" secondItem="HxL-Ct-mBx" secondAttribute="trailing" id="fQb-Ne-dpD"/>
+                <constraint firstItem="whR-U9-r6R" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="vyR-61-6ba"/>
+            </constraints>
+            <connections>
+                <outlet property="editButton" destination="Gli-rt-eNv" id="Xik-Ci-BpQ"/>
+                <outlet property="editLabel" destination="XoW-9P-5fg" id="km8-23-Ydh"/>
+                <outlet property="editView" destination="whR-U9-r6R" id="6rA-Sn-lxC"/>
+                <outlet property="scanedImageContainerView" destination="HxL-Ct-mBx" id="Y6R-be-cBN"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="111.83035714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Blue">
+            <color red="0.031372549019607843" green="0.53333333333333333" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

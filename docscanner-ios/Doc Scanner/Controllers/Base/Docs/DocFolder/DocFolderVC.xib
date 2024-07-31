@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DocFolderVC" customModule="Doc_Scanner" customModuleProvider="target">
+            <connections>
+                <outlet property="backBtn" destination="38q-BQ-OxZ" id="ILs-Fl-xGN"/>
+                <outlet property="cancelBtn" destination="gH4-wP-6kB" id="60Z-uu-dCY"/>
+                <outlet property="collectionView" destination="9pY-Sa-Td5" id="ZLw-lR-72p"/>
+                <outlet property="noDataStack" destination="7ud-Lh-QXD" id="03Z-Es-2RT"/>
+                <outlet property="proBarView" destination="tMX-Q3-U8o" id="Xuw-CW-YbC"/>
+                <outlet property="selectAllBtn" destination="63b-98-vKs" id="fbR-k0-Dbd"/>
+                <outlet property="titleLbl" destination="wCs-X6-BMD" id="UR3-KW-1E1"/>
+                <outlet property="view" destination="HJI-bb-eDo" id="UZ3-dS-SrT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="HJI-bb-eDo">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g9B-8p-wjW">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doc Scanner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCs-X6-BMD">
+                            <rect key="frame" x="149" y="60" width="116" height="23.5"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                            <color key="textColor" name="Tab-Grey"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gH4-wP-6kB">
+                            <rect key="frame" x="20" y="57.5" width="44" height="29"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" name="Tab-Grey"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapCancel:" destination="-1" eventType="touchUpInside" id="eB5-jY-xop"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38q-BQ-OxZ">
+                            <rect key="frame" x="20" y="57.5" width="44" height="29"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                            <state key="normal" title="Back">
+                                <color key="titleColor" name="Tab-Grey"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapBack:" destination="-1" eventType="touchUpInside" id="geQ-Qx-56D"/>
+                                <action selector="didTapCancel:" destination="-1" eventType="touchUpInside" id="4SM-oH-Sio"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="38q-BQ-OxZ" firstAttribute="centerX" secondItem="gH4-wP-6kB" secondAttribute="centerX" id="51m-sz-f5Q"/>
+                        <constraint firstItem="gH4-wP-6kB" firstAttribute="centerY" secondItem="wCs-X6-BMD" secondAttribute="centerY" id="F2Y-Vr-DQh"/>
+                        <constraint firstItem="38q-BQ-OxZ" firstAttribute="width" secondItem="gH4-wP-6kB" secondAttribute="width" id="e0E-q0-2pu"/>
+                        <constraint firstItem="wCs-X6-BMD" firstAttribute="centerX" secondItem="g9B-8p-wjW" secondAttribute="centerX" id="hKf-Pv-0ny"/>
+                        <constraint firstItem="38q-BQ-OxZ" firstAttribute="height" secondItem="gH4-wP-6kB" secondAttribute="height" id="hmn-eS-K3b"/>
+                        <constraint firstItem="38q-BQ-OxZ" firstAttribute="centerY" secondItem="gH4-wP-6kB" secondAttribute="centerY" id="vTF-c7-sMn"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YCc-Do-rUr">
+                    <rect key="frame" x="0.0" y="89.5" width="414" height="806.5"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tMX-Q3-U8o">
+                            <rect key="frame" x="20" y="9" width="374" height="52"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pro-bar-bg" translatesAutoresizingMaskIntoConstraints="NO" id="4TW-R5-USK">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="52"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-crown" translatesAutoresizingMaskIntoConstraints="NO" id="bj7-E3-4PF">
+                                    <rect key="frame" x="15" y="10.5" width="31" height="31"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sm-arrow-right" translatesAutoresizingMaskIntoConstraints="NO" id="PeE-PX-8kt">
+                                    <rect key="frame" x="61" y="14" width="5.5" height="5.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="5.5" id="PtC-Ak-Gq2"/>
+                                        <constraint firstAttribute="width" constant="5.5" id="kyA-VB-Mjl"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sm-arrow-right" translatesAutoresizingMaskIntoConstraints="NO" id="Eyf-NR-dsg">
+                                    <rect key="frame" x="61" y="33" width="5.5" height="5.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="5.5" id="Sox-dv-5Zk"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1TB-Bk-ojR">
+                                    <rect key="frame" x="73" y="9.5" width="120.5" height="33"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OCR | E-Sign | No Ads" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nT6-VG-gzs">
+                                            <rect key="frame" x="0.0" y="0.0" width="120.5" height="14"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                            <color key="textColor" name="Tab-Grey"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unilimited Documents" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tbe-tS-zkH">
+                                            <rect key="frame" x="0.0" y="19" width="120.5" height="14"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                            <color key="textColor" name="Tab-Grey"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="get-pro-btn" translatesAutoresizingMaskIntoConstraints="NO" id="aF0-Tu-Qmt">
+                                    <rect key="frame" x="284" y="12" width="80" height="28"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuf-sG-bj3">
+                                    <rect key="frame" x="284" y="12" width="80" height="28"/>
+                                    <connections>
+                                        <action selector="didTapGetPro:" destination="-1" eventType="touchUpInside" id="Gim-Vy-gjm"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="PeE-PX-8kt" firstAttribute="leading" secondItem="bj7-E3-4PF" secondAttribute="trailing" constant="15" id="2aB-5o-7jO"/>
+                                <constraint firstItem="PeE-PX-8kt" firstAttribute="trailing" secondItem="nT6-VG-gzs" secondAttribute="leading" constant="-6.5" id="3By-oE-XFA"/>
+                                <constraint firstItem="kuf-sG-bj3" firstAttribute="centerX" secondItem="aF0-Tu-Qmt" secondAttribute="centerX" id="3Kx-nN-Etg"/>
+                                <constraint firstItem="aF0-Tu-Qmt" firstAttribute="width" secondItem="tMX-Q3-U8o" secondAttribute="height" multiplier="20:13" id="6Cb-lf-9b6"/>
+                                <constraint firstItem="bj7-E3-4PF" firstAttribute="height" secondItem="tMX-Q3-U8o" secondAttribute="height" multiplier="0.596154" id="8w2-uC-p1m"/>
+                                <constraint firstAttribute="height" constant="52" id="Bhj-cf-Jz5"/>
+                                <constraint firstItem="bj7-E3-4PF" firstAttribute="centerY" secondItem="tMX-Q3-U8o" secondAttribute="centerY" id="D4d-uJ-uuV"/>
+                                <constraint firstItem="1TB-Bk-ojR" firstAttribute="centerY" secondItem="bj7-E3-4PF" secondAttribute="centerY" id="LGH-LE-9wL"/>
+                                <constraint firstItem="aF0-Tu-Qmt" firstAttribute="height" secondItem="tMX-Q3-U8o" secondAttribute="height" multiplier="0.538462" id="QJy-gf-54A"/>
+                                <constraint firstItem="aF0-Tu-Qmt" firstAttribute="centerY" secondItem="1TB-Bk-ojR" secondAttribute="centerY" id="XFy-b4-rJp"/>
+                                <constraint firstAttribute="trailing" secondItem="aF0-Tu-Qmt" secondAttribute="trailing" constant="10" id="ZDO-Fw-4pV"/>
+                                <constraint firstItem="4TW-R5-USK" firstAttribute="centerX" secondItem="tMX-Q3-U8o" secondAttribute="centerX" id="ZHJ-qt-zuk"/>
+                                <constraint firstItem="Eyf-NR-dsg" firstAttribute="leading" secondItem="PeE-PX-8kt" secondAttribute="leading" id="aHX-9t-TJ6"/>
+                                <constraint firstItem="kuf-sG-bj3" firstAttribute="width" secondItem="aF0-Tu-Qmt" secondAttribute="width" id="c3j-m3-MB5"/>
+                                <constraint firstItem="kuf-sG-bj3" firstAttribute="height" secondItem="aF0-Tu-Qmt" secondAttribute="height" id="dvI-YK-Hzj"/>
+                                <constraint firstItem="kuf-sG-bj3" firstAttribute="centerY" secondItem="aF0-Tu-Qmt" secondAttribute="centerY" id="gRi-x1-r1c"/>
+                                <constraint firstItem="bj7-E3-4PF" firstAttribute="width" secondItem="tMX-Q3-U8o" secondAttribute="height" multiplier="31:52" id="gqJ-rh-s7z"/>
+                                <constraint firstItem="4TW-R5-USK" firstAttribute="height" secondItem="tMX-Q3-U8o" secondAttribute="height" id="hmr-XB-gYz"/>
+                                <constraint firstItem="bj7-E3-4PF" firstAttribute="leading" secondItem="tMX-Q3-U8o" secondAttribute="leading" constant="15" id="lbS-SF-aN2"/>
+                                <constraint firstItem="PeE-PX-8kt" firstAttribute="centerY" secondItem="nT6-VG-gzs" secondAttribute="centerY" id="nAa-mu-bBp"/>
+                                <constraint firstItem="4TW-R5-USK" firstAttribute="centerY" secondItem="tMX-Q3-U8o" secondAttribute="centerY" id="nXx-IJ-aeH"/>
+                                <constraint firstItem="Eyf-NR-dsg" firstAttribute="trailing" secondItem="PeE-PX-8kt" secondAttribute="trailing" id="odf-TF-bfo"/>
+                                <constraint firstItem="4TW-R5-USK" firstAttribute="width" secondItem="tMX-Q3-U8o" secondAttribute="width" id="pbQ-iI-0WS"/>
+                                <constraint firstItem="Eyf-NR-dsg" firstAttribute="centerY" secondItem="Tbe-tS-zkH" secondAttribute="centerY" id="tUe-vg-jjl"/>
+                            </constraints>
+                        </view>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63b-98-vKs">
+                            <rect key="frame" x="320" y="78" width="74" height="29"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                            <state key="normal" title="  Select All  ">
+                                <color key="titleColor" red="0.031372549020000001" green="0.53333333329999999" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" title="  Unselect All  "/>
+                            <connections>
+                                <action selector="didTapSelectAll:" destination="-1" eventType="touchUpInside" id="nFv-So-SKu"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="7ud-Lh-QXD">
+                            <rect key="frame" x="107" y="277" width="200" height="252.5"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-document-image" translatesAutoresizingMaskIntoConstraints="NO" id="wbb-En-U0u">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="182"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="wbb-En-U0u" secondAttribute="height" multiplier="100:91" id="0ZL-dz-NnZ"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2XY-ez-hpU">
+                                    <rect key="frame" x="0.0" y="207" width="200" height="45.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no document here !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWj-U7-ZVm">
+                                            <rect key="frame" x="0.0" y="0.0" width="196" height="17.5"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                            <color key="textColor" name="Tab-Grey"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3i-dY-3rO">
+                                            <rect key="frame" x="0.0" y="17.5" width="192.5" height="28"/>
+                                            <string key="text">Scan or import your docs using the 
+scan button below.</string>
+                                            <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="12"/>
+                                            <color key="textColor" red="0.55294117649999996" green="0.55294117649999996" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9pY-Sa-Td5">
+                            <rect key="frame" x="20" y="158.5" width="374" height="648"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="mQM-Od-Deq">
+                                <size key="itemSize" width="0.0" height="0.0"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="I1f-2V-Don"/>
+                                <outlet property="delegate" destination="-1" id="UwE-mi-OYv"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="tMX-Q3-U8o" firstAttribute="leading" secondItem="YCc-Do-rUr" secondAttribute="leading" constant="20" id="3bx-0J-tyB"/>
+                        <constraint firstItem="9pY-Sa-Td5" firstAttribute="leading" secondItem="YCc-Do-rUr" secondAttribute="leading" constant="20" id="MSM-zs-d5U"/>
+                        <constraint firstItem="9pY-Sa-Td5" firstAttribute="top" secondItem="63b-98-vKs" secondAttribute="bottom" constant="51.5" id="NcL-FJ-LDL"/>
+                        <constraint firstAttribute="trailing" secondItem="tMX-Q3-U8o" secondAttribute="trailing" constant="20" id="NjT-h1-vVb"/>
+                        <constraint firstAttribute="bottom" secondItem="9pY-Sa-Td5" secondAttribute="bottom" id="QVj-Hs-J7t"/>
+                        <constraint firstItem="63b-98-vKs" firstAttribute="top" secondItem="tMX-Q3-U8o" secondAttribute="bottom" constant="17" id="WBc-Tz-tGg"/>
+                        <constraint firstAttribute="trailing" secondItem="9pY-Sa-Td5" secondAttribute="trailing" constant="20" id="X7y-1Q-fyl"/>
+                        <constraint firstItem="7ud-Lh-QXD" firstAttribute="centerY" secondItem="YCc-Do-rUr" secondAttribute="centerY" id="abw-Mc-R7f"/>
+                        <constraint firstItem="7ud-Lh-QXD" firstAttribute="centerX" secondItem="YCc-Do-rUr" secondAttribute="centerX" id="bfI-UY-KMJ"/>
+                        <constraint firstItem="63b-98-vKs" firstAttribute="trailing" secondItem="tMX-Q3-U8o" secondAttribute="trailing" id="ral-Pn-iIn"/>
+                        <constraint firstItem="tMX-Q3-U8o" firstAttribute="top" secondItem="YCc-Do-rUr" secondAttribute="top" constant="9" id="xG1-ic-hkn"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="TH4-a2-qT3"/>
+            <color key="backgroundColor" name="White"/>
+            <constraints>
+                <constraint firstItem="g9B-8p-wjW" firstAttribute="top" secondItem="HJI-bb-eDo" secondAttribute="top" id="1sB-BY-pBM"/>
+                <constraint firstItem="wCs-X6-BMD" firstAttribute="top" secondItem="TH4-a2-qT3" secondAttribute="top" constant="16" id="7Sb-q8-P87"/>
+                <constraint firstItem="g9B-8p-wjW" firstAttribute="height" secondItem="HJI-bb-eDo" secondAttribute="height" multiplier="0.1" id="ArT-ix-4Sh"/>
+                <constraint firstItem="YCc-Do-rUr" firstAttribute="leading" secondItem="TH4-a2-qT3" secondAttribute="leading" id="Cri-o4-J0x"/>
+                <constraint firstItem="wbb-En-U0u" firstAttribute="width" secondItem="HJI-bb-eDo" secondAttribute="width" multiplier="0.484" id="I16-Bk-tZU"/>
+                <constraint firstItem="YCc-Do-rUr" firstAttribute="top" secondItem="g9B-8p-wjW" secondAttribute="bottom" id="J7X-nW-hnF"/>
+                <constraint firstItem="g9B-8p-wjW" firstAttribute="trailing" secondItem="TH4-a2-qT3" secondAttribute="trailing" id="JFV-ri-a29"/>
+                <constraint firstAttribute="bottom" secondItem="YCc-Do-rUr" secondAttribute="bottom" id="emx-1d-gq5"/>
+                <constraint firstItem="gH4-wP-6kB" firstAttribute="leading" secondItem="tMX-Q3-U8o" secondAttribute="leading" id="gBe-ip-cVm"/>
+                <constraint firstItem="g9B-8p-wjW" firstAttribute="leading" secondItem="TH4-a2-qT3" secondAttribute="leading" id="gy6-XW-xxI"/>
+                <constraint firstItem="YCc-Do-rUr" firstAttribute="trailing" secondItem="TH4-a2-qT3" secondAttribute="trailing" id="r30-5g-Ict"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="110.49107142857143"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="get-pro-btn" width="128" height="45"/>
+        <image name="no-document-image" width="256" height="233"/>
+        <image name="pro-bar-bg" width="940" height="90"/>
+        <image name="red-crown" width="128" height="128"/>
+        <image name="sm-arrow-right" width="23" height="23"/>
+        <namedColor name="Tab-Grey">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

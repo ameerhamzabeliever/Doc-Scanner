@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OCRTextVC" customModule="Doc_Scanner" customModuleProvider="target">
+            <connections>
+                <outlet property="ocrTextView" destination="r81-8I-VUP" id="eUV-TW-QPF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ge9-XH-nLG">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OCR Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fZ-Wo-XeL">
+                            <rect key="frame" x="154.5" y="60" width="105.5" height="23.5"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                            <color key="textColor" name="Tab-Grey"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PdX-i3-B57">
+                            <rect key="frame" x="20" y="57.5" width="44" height="29"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" name="Tab-Grey"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapCancel:" destination="-1" eventType="touchUpInside" id="M4P-Yt-FZa"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="PdX-i3-B57" firstAttribute="centerY" secondItem="1fZ-Wo-XeL" secondAttribute="centerY" id="6bS-Gw-L1g"/>
+                        <constraint firstItem="1fZ-Wo-XeL" firstAttribute="centerX" secondItem="Ge9-XH-nLG" secondAttribute="centerX" id="AEJ-Rg-CCZ"/>
+                        <constraint firstItem="PdX-i3-B57" firstAttribute="leading" secondItem="Ge9-XH-nLG" secondAttribute="leading" constant="20" symbolic="YES" id="fsZ-qW-JDj"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r81-8I-VUP">
+                    <rect key="frame" x="20" y="109.5" width="374" height="752.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="textColor" name="Tab-Grey"/>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Ge9-XH-nLG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4a0-x6-7dS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ge9-XH-nLG" secondAttribute="trailing" id="6n9-Xb-TO4"/>
+                <constraint firstItem="Ge9-XH-nLG" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0998884" id="CG8-7h-qbB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="r81-8I-VUP" secondAttribute="trailing" constant="20" id="IaT-s7-L5H"/>
+                <constraint firstItem="r81-8I-VUP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="IiT-L4-J0H"/>
+                <constraint firstItem="r81-8I-VUP" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="K3c-0i-leV"/>
+                <constraint firstItem="1fZ-Wo-XeL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="T56-eR-Ac1"/>
+                <constraint firstItem="r81-8I-VUP" firstAttribute="top" secondItem="Ge9-XH-nLG" secondAttribute="bottom" constant="20" id="beV-Sd-31X"/>
+                <constraint firstItem="Ge9-XH-nLG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lXY-jW-cbk"/>
+            </constraints>
+            <point key="canvasLocation" x="-197.10144927536234" y="92.410714285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Tab-Grey">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

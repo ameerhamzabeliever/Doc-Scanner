@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SettingsCell" customModule="Doc_Scanner" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J09-Mo-QJ8">
+                        <rect key="frame" x="0.0" y="65.5" width="375" height="0.5"/>
+                        <color key="backgroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="86F-Ga-L7x"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Pin &amp; Touch ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIs-lT-yn2">
+                        <rect key="frame" x="32" y="25" width="121.5" height="16.5"/>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                        <color key="textColor" name="Tab-Grey"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-right" translatesAutoresizingMaskIntoConstraints="NO" id="aSR-Hr-nIe">
+                        <rect key="frame" x="342" y="27" width="6" height="12"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DV-U1-Uc5">
+                        <rect key="frame" x="319" y="26" width="17" height="14"/>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                        <color key="textColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vC5-Ct-dwR">
+                        <rect key="frame" x="299" y="17.5" width="51" height="31"/>
+                        <color key="onTintColor" red="0.40784313729999999" green="0.94117647059999998" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="thumbTintColor" red="0.40784313729999999" green="0.94117647059999998" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <action selector="toggleAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="s0G-4z-s3n"/>
+                        </connections>
+                    </switch>
+                </subviews>
+                <color key="backgroundColor" name="White"/>
+                <constraints>
+                    <constraint firstItem="QIs-lT-yn2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1jR-Uu-4MB"/>
+                    <constraint firstItem="aSR-Hr-nIe" firstAttribute="leading" secondItem="9DV-U1-Uc5" secondAttribute="trailing" constant="6" id="4Ae-ih-fnr"/>
+                    <constraint firstItem="aSR-Hr-nIe" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="1:11" id="4oa-go-BNt"/>
+                    <constraint firstItem="QIs-lT-yn2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="59l-BU-apJ"/>
+                    <constraint firstAttribute="trailing" secondItem="vC5-Ct-dwR" secondAttribute="trailing" constant="27" id="HtJ-rE-6MN"/>
+                    <constraint firstAttribute="trailing" secondItem="J09-Mo-QJ8" secondAttribute="trailing" id="TVw-Cr-DlQ"/>
+                    <constraint firstItem="aSR-Hr-nIe" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XIb-9h-LGs"/>
+                    <constraint firstItem="aSR-Hr-nIe" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.181818" id="ZRl-g9-Fny"/>
+                    <constraint firstItem="J09-Mo-QJ8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fhz-K4-Z0A"/>
+                    <constraint firstItem="9DV-U1-Uc5" firstAttribute="centerY" secondItem="aSR-Hr-nIe" secondAttribute="centerY" id="fno-Ic-CW0"/>
+                    <constraint firstItem="vC5-Ct-dwR" firstAttribute="centerY" secondItem="QIs-lT-yn2" secondAttribute="centerY" id="kAW-CI-A4M"/>
+                    <constraint firstAttribute="bottom" secondItem="J09-Mo-QJ8" secondAttribute="bottom" id="lqz-D7-KtK"/>
+                    <constraint firstAttribute="trailing" secondItem="aSR-Hr-nIe" secondAttribute="trailing" constant="27" id="rF3-vq-JT9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="White"/>
+            <connections>
+                <outlet property="arrowRightImage" destination="aSR-Hr-nIe" id="Ko3-uh-hlj"/>
+                <outlet property="nameLabel" destination="QIs-lT-yn2" id="41x-Uq-OFI"/>
+                <outlet property="selectedNameLabel" destination="9DV-U1-Uc5" id="6Lf-9r-1lM"/>
+                <outlet property="toggleSwitch" destination="vC5-Ct-dwR" id="lI9-sp-W1e"/>
+            </connections>
+            <point key="canvasLocation" x="138.40579710144928" y="87.723214285714278"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow-right" width="225" height="416"/>
+        <namedColor name="Tab-Grey">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

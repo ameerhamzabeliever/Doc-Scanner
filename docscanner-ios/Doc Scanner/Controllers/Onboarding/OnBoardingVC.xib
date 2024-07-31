@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnBoardingVC" customModule="Doc_Scanner" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="OtE-aW-C99" id="wUY-YT-OsX"/>
+                <outlet property="pageControl" destination="sLU-79-Jsp" id="KqR-aJ-0mu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="OtE-aW-C99">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="jgs-mL-xDp">
+                        <size key="itemSize" width="0.0" height="0.0"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ehD-ea-R4t"/>
+                        <outlet property="delegate" destination="-1" id="bv7-rE-We0"/>
+                    </connections>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSH-m1-PUA">
+                    <rect key="frame" x="37.5" y="746" width="339" height="55"/>
+                    <color key="backgroundColor" name="Blue"/>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                    <state key="normal" title="Get Started">
+                        <color key="titleColor" name="White"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didTapGetStarted:" destination="-1" eventType="touchUpInside" id="THQ-Mw-rYY"/>
+                    </connections>
+                </button>
+                <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLU-79-Jsp" customClass="DSPageControl" customModule="Doc_Scanner" customModuleProvider="target">
+                    <rect key="frame" x="124.5" y="676" width="165" height="10"/>
+                    <color key="backgroundColor" red="0.031372549019607843" green="0.53333333333333333" blue="0.97254901960784312" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" white="1" alpha="0.01" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="165" id="8ij-0w-aew"/>
+                        <constraint firstAttribute="height" constant="10" id="btA-Oj-ya1"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="elementWidth">
+                            <real key="value" value="56"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="elementHeight">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="currentPageTintColor">
+                            <color key="value" name="Blue"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="White"/>
+            <constraints>
+                <constraint firstItem="OtE-aW-C99" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="04S-Bh-0mF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HSH-m1-PUA" secondAttribute="bottom" constant="61" id="97o-BS-Sf4"/>
+                <constraint firstItem="HSH-m1-PUA" firstAttribute="centerX" secondItem="OtE-aW-C99" secondAttribute="centerX" id="Ftc-2a-m5h"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="OtE-aW-C99" secondAttribute="top" id="U7p-Ud-pJT"/>
+                <constraint firstItem="OtE-aW-C99" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="c30-jZ-sAO"/>
+                <constraint firstItem="HSH-m1-PUA" firstAttribute="top" secondItem="sLU-79-Jsp" secondAttribute="bottom" constant="60" id="dxq-xl-kS1"/>
+                <constraint firstItem="HSH-m1-PUA" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0613839" id="sz1-3F-7hZ"/>
+                <constraint firstItem="HSH-m1-PUA" firstAttribute="width" secondItem="OtE-aW-C99" secondAttribute="width" multiplier="0.818841" id="tfv-ta-nzJ"/>
+                <constraint firstItem="sLU-79-Jsp" firstAttribute="centerX" secondItem="HSH-m1-PUA" secondAttribute="centerX" id="wHr-JB-fre"/>
+                <constraint firstItem="OtE-aW-C99" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="xaz-Is-UZD"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Blue">
+            <color red="0.031372549019607843" green="0.53333333333333333" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

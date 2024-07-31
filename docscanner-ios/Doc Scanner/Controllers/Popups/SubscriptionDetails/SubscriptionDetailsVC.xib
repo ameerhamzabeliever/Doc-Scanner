@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubscriptionDetailsVC" customModule="Doc_Scanner" customModuleProvider="target">
+            <connections>
+                <outlet property="privacyPolicyButton" destination="ndB-xy-aLQ" id="GuB-La-aTy"/>
+                <outlet property="termsOfServicesButton" destination="jta-ep-Vf3" id="ELq-tw-XtG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cross-btn" translatesAutoresizingMaskIntoConstraints="NO" id="hMK-4L-Wd7">
+                    <rect key="frame" x="363" y="52" width="25" height="25"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="hMK-4L-Wd7" secondAttribute="height" multiplier="1:1" id="2cE-G5-yi8"/>
+                        <constraint firstAttribute="height" constant="25" id="z2H-R7-CIc"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="0.0" height="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.14999999999999999"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" red="0.33725490200000002" green="0.33725490200000002" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WjA-w2-Usj">
+                    <rect key="frame" x="352.5" y="49.5" width="46" height="30"/>
+                    <connections>
+                        <action selector="didTapCross:" destination="-1" eventType="touchUpInside" id="bXu-OL-P6p"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscription" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eT-Cc-uY0">
+                    <rect key="frame" x="150.5" y="60" width="113" height="23.5"/>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                    <color key="textColor" name="Tab-Grey"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZI-30-OAa">
+                    <rect key="frame" x="24" y="103.5" width="366" height="240"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="dBx-ys-16I"/>
+                    </constraints>
+                    <mutableString key="text">We currently offer the following auto-renewing subscriptions :- Weekly Subscription at $3.99. Monthly Subscription at $7.99/mo. Yearly Subscription at $49.99/year with 3 days free trial. According to App Store policy, your subscription will be automatically renewed after the free trial ends. Your payment will be charged to your iTunes Account once you confirm your purchase. Your iTunes account will be charged again when your subscription automatically renews at the end of your current subscription period unless auto-renew is turned off at least 24 hours prior to the end of the current period. You can manage or turned off auto-renew in your Apple ID Account Settings any time after purchase.</mutableString>
+                    <color key="textColor" red="0.25490196078431371" green="0.25490196078431371" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To manage your subscriptions or trun of auto-renewal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVs-Dz-mYS">
+                    <rect key="frame" x="24" y="363.5" width="366" height="16.5"/>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                    <color key="textColor" red="0.25490196078431371" green="0.25490196078431371" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JU0-H3-Smh">
+                    <rect key="frame" x="57" y="400" width="300" height="150"/>
+                    <string key="text">1. Go to settings &gt; iTunes &amp; AppStore
+2. Tap your Apple ID at the top of the screen
+3. Tap your Apple ID. You might need to sign in or 
+use Touch ID.
+4. Tap Subscrition.
+5. Tap the subscription you want to manage.
+6. Use the options to manage your subscription.</string>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                    <color key="textColor" red="0.25490196079999999" green="0.25490196079999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Links" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gel-pZ-7hv">
+                    <rect key="frame" x="183.5" y="570" width="47.5" height="23.5"/>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                    <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="99V-TB-rGR">
+                    <rect key="frame" x="57" y="613.5" width="119" height="58"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cOI-oQ-pap">
+                            <rect key="frame" x="0.0" y="0.0" width="119" height="29"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iq1-gk-jTe">
+                                    <rect key="frame" x="0.0" y="3" width="7" height="23.5"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                    <color key="textColor" red="0.25490196078431371" green="0.25490196078431371" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndB-xy-aLQ">
+                                    <rect key="frame" x="17" y="0.0" width="102" height="29"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                    <state key="normal" title="Privacy policy">
+                                        <color key="titleColor" red="0.25490196078431371" green="0.25490196078431371" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="r2l-OZ-Ydz">
+                            <rect key="frame" x="0.0" y="29" width="119" height="29"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQJ-Py-brf">
+                                    <rect key="frame" x="0.0" y="3" width="7" height="23.5"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                    <color key="textColor" red="0.25490196079999999" green="0.25490196079999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jta-ep-Vf3">
+                                    <rect key="frame" x="17" y="0.0" width="102" height="29"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                    <state key="normal" title="Terms of service">
+                                        <color key="titleColor" red="0.25490196079999999" green="0.25490196079999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="White"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nZI-30-OAa" secondAttribute="trailing" constant="24" id="7D9-Du-qej"/>
+                <constraint firstItem="eVs-Dz-mYS" firstAttribute="top" secondItem="nZI-30-OAa" secondAttribute="bottom" constant="20" id="7m5-OE-fpF"/>
+                <constraint firstItem="WjA-w2-Usj" firstAttribute="centerX" secondItem="hMK-4L-Wd7" secondAttribute="centerX" id="86b-bp-7bh"/>
+                <constraint firstItem="JU0-H3-Smh" firstAttribute="centerX" secondItem="eVs-Dz-mYS" secondAttribute="centerX" id="8eb-dI-11W"/>
+                <constraint firstItem="WjA-w2-Usj" firstAttribute="width" secondItem="hMK-4L-Wd7" secondAttribute="width" multiplier="1.84" id="AH5-r0-uZv"/>
+                <constraint firstItem="gel-pZ-7hv" firstAttribute="top" secondItem="JU0-H3-Smh" secondAttribute="bottom" constant="20" id="AmG-51-zD9"/>
+                <constraint firstItem="gel-pZ-7hv" firstAttribute="centerX" secondItem="JU0-H3-Smh" secondAttribute="centerX" id="Ao6-kp-l8a"/>
+                <constraint firstItem="eVs-Dz-mYS" firstAttribute="trailing" secondItem="nZI-30-OAa" secondAttribute="trailing" id="Evc-q3-ZHZ"/>
+                <constraint firstItem="1eT-Cc-uY0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="G7A-7R-7yG"/>
+                <constraint firstItem="JU0-H3-Smh" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.167411" id="GqH-bU-Mj6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hMK-4L-Wd7" secondAttribute="trailing" constant="26" id="INO-4b-e4H"/>
+                <constraint firstItem="nZI-30-OAa" firstAttribute="top" secondItem="1eT-Cc-uY0" secondAttribute="bottom" constant="20" id="LBB-BY-D6t"/>
+                <constraint firstItem="nZI-30-OAa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="R1i-SJ-Bkv"/>
+                <constraint firstItem="JU0-H3-Smh" firstAttribute="top" secondItem="eVs-Dz-mYS" secondAttribute="bottom" constant="20" id="UXm-Xz-2Oa"/>
+                <constraint firstItem="hMK-4L-Wd7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="UyD-dI-yYh"/>
+                <constraint firstItem="WjA-w2-Usj" firstAttribute="height" secondItem="hMK-4L-Wd7" secondAttribute="height" multiplier="1.2" id="Xtv-m5-thJ"/>
+                <constraint firstItem="99V-TB-rGR" firstAttribute="top" secondItem="gel-pZ-7hv" secondAttribute="bottom" constant="20" id="haV-cZ-fkO"/>
+                <constraint firstItem="WjA-w2-Usj" firstAttribute="centerY" secondItem="hMK-4L-Wd7" secondAttribute="centerY" id="n0g-xO-TMK"/>
+                <constraint firstItem="JU0-H3-Smh" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.724638" id="r3d-D5-qv7"/>
+                <constraint firstItem="1eT-Cc-uY0" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="v6c-ql-oGx"/>
+                <constraint firstItem="99V-TB-rGR" firstAttribute="leading" secondItem="JU0-H3-Smh" secondAttribute="leading" id="vIc-nm-kXc"/>
+                <constraint firstItem="eVs-Dz-mYS" firstAttribute="leading" secondItem="nZI-30-OAa" secondAttribute="leading" id="ygB-Fv-hA7"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cross-btn" width="128" height="128"/>
+        <namedColor name="Tab-Grey">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

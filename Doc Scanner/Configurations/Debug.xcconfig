@@ -1,0 +1,12 @@
+//
+//  Debug.xcconfig
+//  Doc Scanner
+//
+//  Created by Umar Farooq Nadeem on 7/23/20.
+//  Copyright © 2020 KingAppStudio. All rights reserved.
+//
+
+APP_NAME      = Doc Scanner
+APP_VERSION   = 1.0
+APP_BUILD     = 0.1
+APP_BUNDLE_ID = com.pttgames.bizscanner

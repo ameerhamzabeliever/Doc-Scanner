@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AppPasscodeVC" customModule="Doc_Scanner" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="bTL-p0-wKA" id="nVV-o1-nBh"/>
+                <outlet property="backImageView" destination="KAw-D2-7Mb" id="Sb4-E2-fty"/>
+                <outlet property="pinTextField" destination="YZ1-WS-KIT" id="FNO-qf-PuV"/>
+                <outlet property="view" destination="dOq-hE-frq" id="frn-UY-DkI"/>
+                <outletCollection property="pinImages" destination="zyh-Er-Tcu" collectionClass="NSMutableArray" id="5rv-Rl-TC9"/>
+                <outletCollection property="pinImages" destination="HTu-yW-9MT" collectionClass="NSMutableArray" id="Nxg-Yy-vYo"/>
+                <outletCollection property="pinImages" destination="1HU-ai-F0C" collectionClass="NSMutableArray" id="fx8-zv-P0p"/>
+                <outletCollection property="pinImages" destination="YKA-l4-HE9" collectionClass="NSMutableArray" id="E15-Zb-QsR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="dOq-hE-frq">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPb-JG-Uh0">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow-back" translatesAutoresizingMaskIntoConstraints="NO" id="KAw-D2-7Mb">
+                            <rect key="frame" x="20" y="65.5" width="13" height="13"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTL-p0-wKA">
+                            <rect key="frame" x="4" y="55.5" width="45.5" height="32.5"/>
+                            <connections>
+                                <action selector="didTapBack:" destination="-1" eventType="touchUpInside" id="z23-pU-u0c"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter 4 digit pin to unlock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnd-uq-vQ4">
+                            <rect key="frame" x="92.5" y="60" width="229" height="23.5"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                            <color key="textColor" name="Tab-Grey"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Dnd-uq-vQ4" firstAttribute="centerX" secondItem="HPb-JG-Uh0" secondAttribute="centerX" id="350-hp-yKE"/>
+                        <constraint firstItem="bTL-p0-wKA" firstAttribute="centerY" secondItem="KAw-D2-7Mb" secondAttribute="centerY" id="Fb4-52-nci"/>
+                        <constraint firstItem="bTL-p0-wKA" firstAttribute="width" secondItem="KAw-D2-7Mb" secondAttribute="width" multiplier="3.5" id="O8k-me-Bst"/>
+                        <constraint firstItem="bTL-p0-wKA" firstAttribute="centerX" secondItem="KAw-D2-7Mb" secondAttribute="centerX" id="XbD-RX-HvT"/>
+                        <constraint firstItem="KAw-D2-7Mb" firstAttribute="leading" secondItem="HPb-JG-Uh0" secondAttribute="leading" constant="20" id="bVz-4p-KEx"/>
+                        <constraint firstItem="bTL-p0-wKA" firstAttribute="height" secondItem="KAw-D2-7Mb" secondAttribute="height" multiplier="2.5" id="oiX-xK-rDc"/>
+                        <constraint firstItem="KAw-D2-7Mb" firstAttribute="centerY" secondItem="Dnd-uq-vQ4" secondAttribute="centerY" id="yxN-Yo-CM0"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngc-5p-LTR">
+                    <rect key="frame" x="0.0" y="89.5" width="414" height="806.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter 4 digit pin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NND-Qy-Vdw">
+                            <rect key="frame" x="122.5" y="200" width="169" height="28"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                            <color key="textColor" name="Tab-Grey"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YZ1-WS-KIT">
+                            <rect key="frame" x="205" y="243.5" width="4" height="18.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <connections>
+                                <action selector="didChangeValue:" destination="-1" eventType="editingChanged" id="G0z-q4-X0g"/>
+                            </connections>
+                        </textField>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="S1h-a5-NOi">
+                            <rect key="frame" x="135.5" y="244" width="143" height="17"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin-unfilled" translatesAutoresizingMaskIntoConstraints="NO" id="zyh-Er-Tcu">
+                                    <rect key="frame" x="0.0" y="0.0" width="17" height="17"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="zyh-Er-Tcu" secondAttribute="height" multiplier="1:1" id="23o-x7-ybr"/>
+                                    </constraints>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin-unfilled" translatesAutoresizingMaskIntoConstraints="NO" id="HTu-yW-9MT">
+                                    <rect key="frame" x="42" y="0.0" width="17" height="17"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin-unfilled" translatesAutoresizingMaskIntoConstraints="NO" id="1HU-ai-F0C">
+                                    <rect key="frame" x="84" y="0.0" width="17" height="17"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin-unfilled" translatesAutoresizingMaskIntoConstraints="NO" id="YKA-l4-HE9">
+                                    <rect key="frame" x="126" y="0.0" width="17" height="17"/>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="S1h-a5-NOi" firstAttribute="centerX" secondItem="NND-Qy-Vdw" secondAttribute="centerX" id="9M8-8a-BDk"/>
+                        <constraint firstItem="NND-Qy-Vdw" firstAttribute="top" secondItem="Ngc-5p-LTR" secondAttribute="top" constant="200" id="K8L-PK-Co3"/>
+                        <constraint firstItem="S1h-a5-NOi" firstAttribute="top" secondItem="NND-Qy-Vdw" secondAttribute="bottom" constant="16" id="TcN-GG-0gS"/>
+                        <constraint firstItem="YZ1-WS-KIT" firstAttribute="centerY" secondItem="S1h-a5-NOi" secondAttribute="centerY" id="lQ5-kX-2NL"/>
+                        <constraint firstItem="NND-Qy-Vdw" firstAttribute="centerX" secondItem="Ngc-5p-LTR" secondAttribute="centerX" id="q65-fi-iWC"/>
+                        <constraint firstItem="YZ1-WS-KIT" firstAttribute="centerX" secondItem="S1h-a5-NOi" secondAttribute="centerX" id="t9B-hd-cyv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="52c-Dj-x8G"/>
+            <color key="backgroundColor" name="White"/>
+            <constraints>
+                <constraint firstItem="HPb-JG-Uh0" firstAttribute="height" secondItem="dOq-hE-frq" secondAttribute="height" multiplier="0.1" id="AJr-Ik-pbH"/>
+                <constraint firstItem="HPb-JG-Uh0" firstAttribute="top" secondItem="dOq-hE-frq" secondAttribute="top" id="Faj-9E-eS0"/>
+                <constraint firstItem="Ngc-5p-LTR" firstAttribute="leading" secondItem="52c-Dj-x8G" secondAttribute="leading" id="Fem-dN-9hq"/>
+                <constraint firstItem="KAw-D2-7Mb" firstAttribute="width" secondItem="dOq-hE-frq" secondAttribute="height" multiplier="13:896" id="MTk-IN-uDf"/>
+                <constraint firstItem="Dnd-uq-vQ4" firstAttribute="top" secondItem="52c-Dj-x8G" secondAttribute="top" constant="16" id="dZ0-jP-AK2"/>
+                <constraint firstItem="KAw-D2-7Mb" firstAttribute="height" secondItem="dOq-hE-frq" secondAttribute="height" multiplier="0.0145089" id="e76-ft-KZD"/>
+                <constraint firstAttribute="bottom" secondItem="Ngc-5p-LTR" secondAttribute="bottom" id="gV6-oh-qHJ"/>
+                <constraint firstItem="HPb-JG-Uh0" firstAttribute="trailing" secondItem="52c-Dj-x8G" secondAttribute="trailing" id="kag-m5-Dh7"/>
+                <constraint firstItem="Ngc-5p-LTR" firstAttribute="top" secondItem="HPb-JG-Uh0" secondAttribute="bottom" id="qp4-gs-yCj"/>
+                <constraint firstItem="Ngc-5p-LTR" firstAttribute="trailing" secondItem="52c-Dj-x8G" secondAttribute="trailing" id="wfm-aS-2wY"/>
+                <constraint firstItem="HPb-JG-Uh0" firstAttribute="leading" secondItem="52c-Dj-x8G" secondAttribute="leading" id="wvP-2O-cYx"/>
+                <constraint firstItem="S1h-a5-NOi" firstAttribute="height" secondItem="dOq-hE-frq" secondAttribute="height" multiplier="0.019" id="y7O-RL-d4N"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="110.49107142857143"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow-back" width="512" height="512"/>
+        <image name="pin-unfilled" width="512" height="512"/>
+        <namedColor name="Tab-Grey">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

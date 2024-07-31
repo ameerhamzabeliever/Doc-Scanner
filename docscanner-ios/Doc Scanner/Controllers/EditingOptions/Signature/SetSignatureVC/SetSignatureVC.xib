@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetSignatureVC" customModule="Doc_Scanner" customModuleProvider="target">
+            <connections>
+                <outlet property="pdfImageContainerView" destination="u0Z-o1-XkR" id="Jup-ox-0C9"/>
+                <outlet property="pdfImageView" destination="ty4-uL-wmO" id="Y9o-wI-ON2"/>
+                <outlet property="view" destination="O0d-e7-dtQ" id="6UX-LP-k5T"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="O0d-e7-dtQ">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uvG-I4-WRB">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efN-UB-vAo">
+                            <rect key="frame" x="20" y="57" width="44" height="29"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" name="Tab-Grey"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapCancel:" destination="-1" eventType="touchUpInside" id="4fc-5R-cZI"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Signature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Mj-ub-OJv">
+                            <rect key="frame" x="146.5" y="60" width="121" height="23.5"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                            <color key="textColor" name="Tab-Grey"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXY-Gx-rg0">
+                            <rect key="frame" x="360" y="57" width="34" height="29"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                            <state key="normal" title="Done">
+                                <color key="titleColor" name="Tab-Grey"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapDone:" destination="-1" eventType="touchUpInside" id="GOp-wq-Vf0"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="9Mj-ub-OJv" firstAttribute="centerY" secondItem="efN-UB-vAo" secondAttribute="centerY" id="8Cy-ii-6QN"/>
+                        <constraint firstItem="efN-UB-vAo" firstAttribute="leading" secondItem="uvG-I4-WRB" secondAttribute="leading" constant="20" id="9hw-A7-vDr"/>
+                        <constraint firstItem="cXY-Gx-rg0" firstAttribute="centerY" secondItem="9Mj-ub-OJv" secondAttribute="centerY" id="eec-Hv-oHK"/>
+                        <constraint firstItem="9Mj-ub-OJv" firstAttribute="centerX" secondItem="uvG-I4-WRB" secondAttribute="centerX" id="nm2-cB-T36"/>
+                        <constraint firstAttribute="trailing" secondItem="cXY-Gx-rg0" secondAttribute="trailing" constant="20" id="qlH-Q1-Y3l"/>
+                    </constraints>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0Z-o1-XkR">
+                    <rect key="frame" x="0.0" y="101.5" width="414" height="632"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ty4-uL-wmO">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="632"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" name="White"/>
+                    <constraints>
+                        <constraint firstItem="ty4-uL-wmO" firstAttribute="top" secondItem="u0Z-o1-XkR" secondAttribute="top" id="J5s-bP-8FX"/>
+                        <constraint firstItem="ty4-uL-wmO" firstAttribute="leading" secondItem="u0Z-o1-XkR" secondAttribute="leading" id="Jyv-Xs-qXk"/>
+                        <constraint firstAttribute="width" secondItem="u0Z-o1-XkR" secondAttribute="height" multiplier="207:316" id="SP7-JW-o2A"/>
+                        <constraint firstAttribute="bottom" secondItem="ty4-uL-wmO" secondAttribute="bottom" id="gdu-CK-pRn"/>
+                        <constraint firstAttribute="trailing" secondItem="ty4-uL-wmO" secondAttribute="trailing" id="z30-76-zUn"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVp-mI-YPJ">
+                    <rect key="frame" x="128.5" y="809" width="157" height="33"/>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                    <state key="normal" title="Add New Signature"/>
+                    <connections>
+                        <action selector="didTapNewSignature:" destination="-1" eventType="touchUpInside" id="gYC-sp-zPj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="ACT-Z6-4e7"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="u0Z-o1-XkR" firstAttribute="centerX" secondItem="ACT-Z6-4e7" secondAttribute="centerX" id="0KX-gV-Ngp"/>
+                <constraint firstItem="uvG-I4-WRB" firstAttribute="height" secondItem="O0d-e7-dtQ" secondAttribute="height" multiplier="0.1" id="7MJ-PZ-s4I"/>
+                <constraint firstItem="u0Z-o1-XkR" firstAttribute="height" secondItem="O0d-e7-dtQ" secondAttribute="height" multiplier="0.705357" id="9Aw-GZ-OaM"/>
+                <constraint firstItem="efN-UB-vAo" firstAttribute="top" secondItem="ACT-Z6-4e7" secondAttribute="top" constant="13" id="AU9-cL-pp1"/>
+                <constraint firstItem="nVp-mI-YPJ" firstAttribute="centerX" secondItem="ACT-Z6-4e7" secondAttribute="centerX" id="DRe-uk-hVK"/>
+                <constraint firstItem="u0Z-o1-XkR" firstAttribute="top" secondItem="uvG-I4-WRB" secondAttribute="bottom" constant="12" id="dmC-6D-5HI"/>
+                <constraint firstItem="uvG-I4-WRB" firstAttribute="leading" secondItem="ACT-Z6-4e7" secondAttribute="leading" id="fCS-nF-JFJ"/>
+                <constraint firstItem="uvG-I4-WRB" firstAttribute="trailing" secondItem="ACT-Z6-4e7" secondAttribute="trailing" id="gKE-xe-bO2"/>
+                <constraint firstItem="uvG-I4-WRB" firstAttribute="top" secondItem="O0d-e7-dtQ" secondAttribute="top" id="hHK-H5-yeG"/>
+                <constraint firstItem="ACT-Z6-4e7" firstAttribute="bottom" secondItem="nVp-mI-YPJ" secondAttribute="bottom" constant="20" id="ifq-zr-tfB"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="87.723214285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Tab-Grey">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
